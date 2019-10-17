@@ -7,4 +7,5 @@ public class RandomNumbers {
             System.out.print(rand.nextInt(10) + 10 + ", ");
         }
     }
+
 }
