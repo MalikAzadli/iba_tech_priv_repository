@@ -20,10 +20,11 @@ public class RandomChars {
             flag = false;
         }
         for(int i = 0; i < s.length(); i++){
-            if((s.charAt(i) > 'Z' && s.charAt(i) < 'A') || (s.charAt(i) > 'z' && s.charAt(i) < 'a')){
-                System.out.println("Not in range.");
-                flag = false;
+            if((s.charAt(i) <= 'Z' && s.charAt(i) >= 'A') || (s.charAt(i) <= 'z' && s.charAt(i) >= 'a')){
+                continue;
             }
+            System.out.println("Not in range");
+            flag=false;
         }
 
         return flag;
