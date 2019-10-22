@@ -1,14 +1,32 @@
-
-import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class RandomChars {
     public static void main(String[] args) {
-        String s1 = genRandom(10);
-        String s2 = genRandom(5);
+        int size1 = 10;
+        int size2 = 5;
+        String s1 = genRandom(size1);
+        String s2 = genRandom(size2);
         System.out.println(s1);
+        System.out.println(isLegal(s1, size1));
         System.out.println(s2);
+        System.out.println(isLegal(s2, size2));
+
+    }
+
+    public static boolean isLegal(String s, int size){
+        boolean flag = true;
+        if(s.length() != size){
+            System.out.println("Different size.");
+            flag = false;
+        }
+        for(int i = 0; i < s.length(); i++){
+            if((s.charAt(i) > 'Z' && s.charAt(i) < 'A') || (s.charAt(i) > 'z' && s.charAt(i) < 'a')){
+                System.out.println("Not in range.");
+                flag = false;
+            }
+        }
+
+        return flag;
     }
 
     public static String genRandom(int size) {
