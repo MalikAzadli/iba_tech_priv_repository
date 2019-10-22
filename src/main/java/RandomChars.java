@@ -10,7 +10,6 @@ public class RandomChars {
         System.out.println(isLegal(s1, size1));
         System.out.println(s2);
         System.out.println(isLegal(s2, size2));
-
     }
 
     public static boolean isLegal(String s, int size){
