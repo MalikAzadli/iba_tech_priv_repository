@@ -9,7 +9,7 @@ public class RandomChars {
         for(int i=0; i<sizeSet; i++){
             int margin = 0;
             if(rand.nextBoolean()) margin = 32;
-            int index = rand.nextInt((int)'Z' - (int)'A') + (int)'A' + margin;
+            int index = rand.nextInt((int)'Z' - (int)'A' + 1) + (int)'A' + margin;
             charList.add((char) index);
         }
         System.out.println(charList);
