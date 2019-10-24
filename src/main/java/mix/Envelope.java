@@ -1,3 +1,5 @@
+package mix;
+
 public class Envelope {
     public static void main(String[] args) {
         int width = 20;

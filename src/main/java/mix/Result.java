@@ -1,3 +1,5 @@
+package mix;
+
 public class Result {
     private final String origin;
     private final String capitalVowels;

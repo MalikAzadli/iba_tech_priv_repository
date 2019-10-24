@@ -1,3 +1,5 @@
+package mix;
+
 import java.util.Random;
 
 public class RandomChars {
