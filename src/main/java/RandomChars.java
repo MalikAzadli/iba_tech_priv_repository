@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class RandomChars {
+
     public static void main(String[] args) {
         RandomChars randomChars = new RandomChars();
         int size1 = 10;

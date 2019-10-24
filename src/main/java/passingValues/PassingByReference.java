@@ -11,8 +11,6 @@ public class PassingByReference {
         System.out.println("After:");
         System.out.printf("i=%d\n", ic.value);
         System.out.printf("k=%d\n", kc.value);
-
-
     }
 
     public static void swap(final IntContainer a, final IntContainer b){
