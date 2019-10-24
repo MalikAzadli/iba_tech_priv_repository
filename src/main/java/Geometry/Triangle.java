@@ -13,7 +13,8 @@ public class Triangle extends Figure {
 
     @Override
     public double area() {
-        float area = (p1.getX() * (p2.getY() - p3.getY()) + p2.getX() * (p3.getY() - p1.getY()) + p3.getX() * (p1.getY() - p2.getY())) / 2.0f;
+        float area = (p1.getX() * (p2.getY() - p3.getY()) + p2.getX() *
+                (p3.getY() - p1.getY()) + p3.getX() * (p1.getY() - p2.getY())) / 2.0f;
         return Math.abs(area);
     }
 }
