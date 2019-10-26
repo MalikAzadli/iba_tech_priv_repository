@@ -27,7 +27,12 @@ public class LetterAnalyzer {
 //            System.out.println(c + ": " + indices.size() + "; " + indices.toString());
 //        }
 
-        map.forEach((k,v) -> System.out.println(k + ": " + v.size() + "; " + v.toString()));
+//        for(Map.Entry entry: map.entrySet()){
+//            ArrayList<Integer> indices = (ArrayList) entry.getValue();
+//            System.out.println(entry.getKey() + ": " + indices.size() + "; " + indices.toString());
+//        }
+
+        map.forEach((k, v) -> System.out.printf("%c : %d : %s\n", k, v.size(), v.toString()));
     }
 
 }
