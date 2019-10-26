@@ -5,7 +5,6 @@ import java.util.*;
 public class LetterAnalyzer {
 
     private final String text;
-    private ArrayList<Integer> currentArray;
 
     public LetterAnalyzer(String text) {
         this.text = text;
