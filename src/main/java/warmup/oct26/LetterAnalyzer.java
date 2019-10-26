@@ -15,17 +15,19 @@ public class LetterAnalyzer {
         for (int i = 0; i < this.text.length(); i++) {
             Character character = this.text.charAt(i);
             if (map.containsKey(character)) map.get(character).add(i + 1);
-            else map.put(character, new ArrayList<Integer>(Arrays.asList(i + 1)));
+            else map.put(character, new ArrayList<>(Arrays.asList(i + 1)));
         }
         return map;
     }
 
     public void printMap(Map<Character, ArrayList<Integer>> map) {
-        Set<Character> characters = map.keySet();
-        for (char c : characters) {
-            ArrayList<Integer> indices = map.get(c);
-            System.out.println(c + ": " + indices.size() + "; " + indices.toString());
-        }
+//        Set<Character> characters = map.keySet();
+//        for (char c : characters) {
+//            ArrayList<Integer> indices = map.get(c);
+//            System.out.println(c + ": " + indices.size() + "; " + indices.toString());
+//        }
+
+        map.forEach((k,v) -> System.out.println(k + ": " + v.size() + "; " + v.toString()));
     }
 
 }
