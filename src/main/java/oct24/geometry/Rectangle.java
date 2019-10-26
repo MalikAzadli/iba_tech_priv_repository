@@ -13,10 +13,4 @@ public class Rectangle extends Figure {
     public double area() {
         return Math.abs((p1.getX()-p2.getX())*(p1.getY()-p2.getY()));
     }
-
-
-    @Override
-    public String toString() {
-        return "I am Rectangle with size of "+area();
-    }
 }

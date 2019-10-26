@@ -18,7 +18,4 @@ public class Triangle extends Figure {
         return Math.abs(area);
     }
 
-    public String toString() {
-        return "I am Triangle with size of "+area();
-    }
 }

@@ -14,8 +14,4 @@ public class Circle extends Figure {
     public double area() {
         return Math.abs(3.14*(radius*radius));
     }
-
-    public String toString() {
-        return "I am Circle with size of "+area();
-    }
 }
