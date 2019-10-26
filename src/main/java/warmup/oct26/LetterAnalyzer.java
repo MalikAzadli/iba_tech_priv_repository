@@ -1,8 +1,6 @@
-package workingwithletters;
+package warmup.oct26;
 
 import mix.RandomChars;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,10 +18,11 @@ public class LetterAnalyzer {
     }
 
     public Map<Character, ArrayList<Integer>> getPairs(){
-        Map<Character, ArrayList<Integer>> map = new HashMap<Character, ArrayList<Integer>>();
+        Map<Character, ArrayList<Integer>> map = new HashMap<>();
         for(int i = 0; i < this.text.length(); i++){
             Character character = this.text.charAt(i);
-            this.currentArray = new ArrayList<Integer>();
+            this.currentArray = new ArrayList<>();
+            if(map.containsKey(character)) continue;
             getIndices(character);
             map.put(character, currentArray);
         }
