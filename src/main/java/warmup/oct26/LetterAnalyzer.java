@@ -11,6 +11,10 @@ public class LetterAnalyzer {
     private String text;
     private ArrayList<Integer> currentArray;
 
+    public LetterAnalyzer(String text){
+        this.text = text;
+    }
+
     public void getIndices(Character ch){
         for(int i = 0; i < this.text.length(); i++){
             if(ch.equals(text.charAt(i))) currentArray.add(i+1);
@@ -35,17 +39,6 @@ public class LetterAnalyzer {
             ArrayList<Integer> indices = map.get(c);
             System.out.println(c + ": " + indices.size()+"; " + indices.toString());
         }
-    }
-
-
-    public static void main(String[] args) {
-        RandomChars randomChars = new RandomChars();
-        LetterAnalyzer letterAnalyzer = new LetterAnalyzer();
-        String randomString = randomChars.genRandom(10);
-        System.out.println(randomString);
-        letterAnalyzer.text = randomString.toUpperCase();
-        Map<Character, ArrayList<Integer>> map = letterAnalyzer.getPairs();
-        letterAnalyzer.printMap(map);
     }
 
 }
