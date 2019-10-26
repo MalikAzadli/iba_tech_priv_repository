@@ -1,4 +1,4 @@
-package warmup.oct26;
+package warmup.oct26.letterAnalyzer;
 
 import java.util.*;
 
