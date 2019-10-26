@@ -17,4 +17,8 @@ public class Triangle extends Figure {
                 (p3.getY() - p1.getY()) + p3.getX() * (p1.getY() - p2.getY())) / 2.0f;
         return Math.abs(area);
     }
+
+    public String toString() {
+        return "I am Triangle with size of "+area();
+    }
 }
