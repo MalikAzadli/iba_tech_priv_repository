@@ -1,4 +1,4 @@
-package Geometry;
+package oct24.geometry;
 
 public class Rectangle extends Figure {
     private Point p1;

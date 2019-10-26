@@ -1,4 +1,4 @@
-package Geometry;
+package oct24.geometry;
 
 public class GeomApp {
     public static void main(String[] args) {
