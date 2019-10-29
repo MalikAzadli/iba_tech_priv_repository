@@ -1,6 +1,7 @@
 package classOct29;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 
@@ -10,18 +11,12 @@ public class ComparatorApplication {
         Comparator<Integer> comparator = new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                int result = 0;
 
-                if ((o1 % 2 == 0 && o2 % 2 == 0) && o1 > o2) result = -1;
-                else if ((o1 % 2 == 0 && o2 % 2 == 0) && o1 < o2) result = 1;
+                if ((o1 % 2 == 0 && o2 % 2 == 0)) return o2 - o1;
+                if ((o1 % 2 != 0 && o2 % 2 != 0)) return o1 - o2;
+                if (o1 % 2 == 0) return -1;
 
-                if ((o1 % 2 != 0 && o2 % 2 != 0) && o1 > o2) result = 1;
-                else if ((o1 % 2 != 0 && o2 % 2 != 0) && o1 < o2) result = -1;
-
-                if (o1 % 2 == 0 && o2 % 2 != 0) result = -1;
-                if (o1 % 2 != 0 && o2 % 2 == 0) result = 0;
-
-                return result;
+                return 0;
             }
         };
         return comparator;
@@ -36,7 +31,7 @@ public class ComparatorApplication {
         }
         System.out.println(randomArray.toString());
         Comparator<Integer> comparator = app.sortArr();
-        randomArray.sort(comparator);
+        Collections.sort(randomArray, comparator);
         System.out.println(randomArray.toString());
 
     }
