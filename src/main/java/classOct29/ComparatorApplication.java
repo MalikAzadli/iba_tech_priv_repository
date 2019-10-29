@@ -12,8 +12,6 @@ public class ComparatorApplication {
             public int compare(Integer o1, Integer o2) {
                 int result = 0;
 
-                if (o2 - o1 < 0) result = 1;
-
                 if ((o1 % 2 == 0 && o2 % 2 == 0) && o1 > o2) result = -1;
                 else if ((o1 % 2 == 0 && o2 % 2 == 0) && o1 < o2) result = 1;
 
