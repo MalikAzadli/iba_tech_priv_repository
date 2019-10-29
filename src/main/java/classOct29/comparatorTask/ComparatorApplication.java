@@ -1,4 +1,4 @@
-package classOct29;
+package classOct29.comparatorTask;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,16 +8,13 @@ import java.util.Random;
 public class ComparatorApplication {
 
     public Comparator<Integer> sortArr() {
-        Comparator<Integer> comparator = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
+        Comparator<Integer> comparator = (o1, o2) -> {
 
-                if ((o1 % 2 == 0 && o2 % 2 == 0)) return o2 - o1;
-                if ((o1 % 2 != 0 && o2 % 2 != 0)) return o1 - o2;
-                if (o1 % 2 == 0) return -1;
+            if ((o1 % 2 == 0 && o2 % 2 == 0)) return o2 - o1;
+            if ((o1 % 2 != 0 && o2 % 2 != 0)) return o1 - o2;
+            if (o1 % 2 == 0) return -1;
 
-                return 0;
-            }
+            return 0;
         };
         return comparator;
     }
@@ -26,7 +23,7 @@ public class ComparatorApplication {
         ComparatorApplication app = new ComparatorApplication();
         Random rand = new Random();
         ArrayList<Integer> randomArray = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             randomArray.add(rand.nextInt(100));
         }
         System.out.println(randomArray.toString());
