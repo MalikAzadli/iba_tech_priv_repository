@@ -1,4 +1,4 @@
-package warmup.oct26.letterAnalyzer;
+package classOct26.letterAnalyzer;
 
 import mix.RandomChars;
 

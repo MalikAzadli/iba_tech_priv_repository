@@ -1,6 +1,7 @@
-package warmup.oct26.comparator;
+package classOct26.comparator;
 
-import oct24.geometry.*;
+import classOct24.*;
+
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package warmup.oct26.iterator1;
+package classOct26.iterator1;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -49,16 +49,17 @@ public class HiddenData implements Iterable<String> {
 
     public Iterator<String> randomIterator() {
         Iterator<String> iterator = new Iterator<String>() {
+            List<String> monthCopy = months;
             Random rand = new Random();
 
             @Override
             public boolean hasNext() {
-                return false;
+                return monthCopy.size()!=0;
             }
 
             @Override
             public String next() {
-                return null;
+                return monthCopy.remove(rand.nextInt(monthCopy.size()));
             }
         };
         return iterator;

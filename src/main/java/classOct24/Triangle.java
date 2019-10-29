@@ -1,4 +1,4 @@
-package oct24.geometry;
+package classOct24;
 
 public class Triangle extends Figure {
     private Point p1;

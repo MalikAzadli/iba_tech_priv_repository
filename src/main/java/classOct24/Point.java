@@ -1,4 +1,4 @@
-package oct24.geometry;
+package classOct24;
 
 public class Point {
     private final int x;

@@ -1,6 +1,4 @@
-package oct24.geometry;
-
-import javax.crypto.spec.PSource;
+package classOct24;
 
 public abstract class Figure implements Comparable<Figure> {
 
