@@ -15,7 +15,7 @@ public class RandomChars {
     }
 
 
-    public String genRandom(int size) {
+    public static String genRandom(int size) {
         int sizeSet = size;
         Random rand = new Random();
         String stream = "";
