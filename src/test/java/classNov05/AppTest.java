@@ -1,5 +1,6 @@
 package classNov05;
 
+import classNov05.warmup.App;
 import org.junit.Before;
 import org.junit.Test;
 
