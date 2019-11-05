@@ -1,44 +1,30 @@
 package classNov05.dao.dao;
 
+import classNov05.dao.dao.dataManager.DataManager;
+import classNov05.dao.dao.dataManager.PersonDataManager;
+
 import java.io.*;
 import java.util.List;
-import java.util.Random;
 
 public class Application {
   public static void main(String[] args) throws IOException {
-    File file = new File("nameSurname");
-    FileReader fr = new FileReader(file);
-    BufferedReader br = new BufferedReader(fr);
-    Random rand = new Random();
-
 
     DAO<Person> pps =
         new DAOPersonHashMap();
 //        new DAOPersonArrayList();
-//        new DAOPersonSQL();
-    DAO<Pizza> pzs =
-        new DAOPizzaHashMap();
-//        new DAOPersonArrayList();
-//        new DAOPizzaSQL();
+    DataManager dataManager = new PersonDataManager("savedData", pps);
+    dataManager.loadData();
 
+    pps.put(new Person(14, "James", 28));
+    pps.delete(3);
+    pps.delete(1);
 
-    br.lines().map(s -> new Person(rand.nextInt(1000), s, rand.nextInt(80))).forEach(p -> pps.put(p));
+    Person person = pps.get(14);
+    System.out.printf("Person with id 10: %s\n", person);
+
     List<Person> all = pps.getAll();
-
-    file = new File("savedData");
-    FileWriter fw = new FileWriter(file);
-    BufferedWriter bw = new BufferedWriter(fw);
-
     System.out.println(all);
-    all.stream().forEach(p -> {
-      try {
-        bw.write(String.format("%d/%s/%d", p.getId(), p.getName(), p.getAge()));
-        bw.newLine();
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    });
 
-
+    dataManager.saveData();
   }
 }

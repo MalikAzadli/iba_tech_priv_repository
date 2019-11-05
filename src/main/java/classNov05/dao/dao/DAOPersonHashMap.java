@@ -21,7 +21,7 @@ public class DAOPersonHashMap implements DAO<Person> {
 
     @Override
     public void delete(int id) {
-        storage.remove(id, get(id));
+        storage.remove(get(id));
     }
 
     @Override

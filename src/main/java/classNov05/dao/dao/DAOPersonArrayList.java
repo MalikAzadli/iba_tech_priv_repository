@@ -2,6 +2,7 @@ package classNov05.dao.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DAOPersonArrayList implements DAO<Person> {
 
@@ -14,12 +15,15 @@ public class DAOPersonArrayList implements DAO<Person> {
 
     @Override
     public Person get(int id) {
-        return storage.get(id);
+        List<Person> person = storage.stream().filter(p -> p.getId() == id).collect(Collectors.toList());
+
+        return person.get(0);
     }
 
     @Override
     public void delete(int id) {
-        storage.remove(get(id));
+        List<Person> person = storage.stream().filter(p -> p.getId() == id).collect(Collectors.toList());
+        storage.remove(person.get(0));
     }
 
     @Override
