@@ -26,7 +26,7 @@ public class Practice {
 
 
         String str = String.format("--%1$15s", "Malik");
-        System.out.println(str);
+        System.out.println(-2<<1);
 
         List<Integer> list = new ArrayList<>();
 //        list.forEach(() -> 77.77);
