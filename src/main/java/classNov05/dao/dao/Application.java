@@ -10,12 +10,13 @@ public class Application {
   public static void main(String[] args) throws IOException {
 
     DAO<Person> pps =
-        new DAOPersonHashMap();
-//        new DAOPersonArrayList();
+//        new DAOPersonHashMap();
+        new DAOPersonArrayList();
     DataManager dataManager = new PersonDataManager("savedData", pps);
     dataManager.loadData();
 
     pps.put(new Person(14, "James", 28));
+    pps.put(new Person(97, "Malik", 22));
     pps.delete(3);
     pps.delete(1);
 

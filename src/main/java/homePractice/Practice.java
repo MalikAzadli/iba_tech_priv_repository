@@ -1,7 +1,7 @@
 package homePractice;
 
+import java.io.*;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Practice {
 
@@ -9,16 +9,28 @@ public class Practice {
         return element;
     }
 
-    public static void main(String[] args) {
-        System.out.println(getAway("Jane"));
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+//        System.out.println(getAway("Jane"));
+//
+//
+//        List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis", "Hello", "HelloWorld", "Hollis");
+//
+//        FileOutputStream fileOutputStream = new FileOutputStream("save.txt");
+//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+//        objectOutputStream.writeObject(strings);
+//
+//        FileInputStream fileInputStream = new FileInputStream("save.txt");
+//        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+//        List<String> asss = (List<String>) objectInputStream.readObject();
+//        System.out.println(asss);
 
-        List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis", "Hello", "HelloWorld", "Hollis");
 
-        strings.stream().filter(string -> string.length()<= 6).map(String::length).sorted().limit(3)
+        String str = String.format("--%1$15s", "Malik");
+        System.out.println(str);
 
-                .distinct().forEach(System.out::println);
+        List<Integer> list = new ArrayList<>();
+//        list.forEach(() -> 77.77);
 
-        Random rand = new Random();
-        rand.ints().limit(30).forEach(System.out::println);
     }
+
 }
