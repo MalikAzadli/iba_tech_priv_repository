@@ -1,4 +1,4 @@
-package classNov12;
+package classNov12.merge;
 
 import java.util.Arrays;
 
@@ -21,8 +21,8 @@ public class MergePractice {
             if (a[i] < b[j]) joined[k++] = a[i++];
             else joined[k++] = b[j++];
         }
-        while (i < a.length) joined[k++] = a[i++];
 
+        while (i < a.length) joined[k++] = a[i++];
         while (j < b.length) joined[k++] = b[j++];
 
         return joined;
