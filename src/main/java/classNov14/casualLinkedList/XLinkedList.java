@@ -92,21 +92,21 @@ public class XLinkedList {
         return lengthRecursive2(item.next, i + 1);
     }
 
-    public void revert_while(){
+    public void revert_while() {
 
     }
 
     public void revert(XItem item) {
-      if(head.next == null) head = item;
-      item.value = head.value;
-      revert(item.next);
+        if (head.next == null) head = item;
+        item.value = head.value;
+        revert(item.next);
     }
 
     public void revert_recursion() {
         revert(head);
     }
 
-    private void revertFor(){
+    private void revert_for() {
 
     }
 
