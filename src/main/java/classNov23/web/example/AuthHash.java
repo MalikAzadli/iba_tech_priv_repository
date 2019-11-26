@@ -16,3 +16,4 @@ public class AuthHash implements Auth {
     return db.containsKey(name) && db.get(name).equals(passwd);
   }
 }
+
