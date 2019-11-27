@@ -1,4 +1,4 @@
-package _practice.tree;
+package _practice.algorithms.tree;
 
 import java.util.LinkedList;
 
