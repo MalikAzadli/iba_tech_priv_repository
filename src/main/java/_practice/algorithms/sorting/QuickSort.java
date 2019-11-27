@@ -1,4 +1,4 @@
-package _practice.algorithms;
+package _practice.algorithms.sorting;
 
 import java.util.Arrays;
 import java.util.Random;
