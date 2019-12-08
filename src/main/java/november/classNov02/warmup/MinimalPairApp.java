@@ -1,7 +1,10 @@
 package november.classNov02.warmup;
 
+import org.junit.jupiter.api.MethodOrderer;
+
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -23,6 +26,7 @@ public class MinimalPairApp {
         System.out.println("Right index: " + (pair.getIndex()+1));
         System.out.println("Sum " + pair.getSum());
 
+        (new Random()).ints();
 
     }
 }
