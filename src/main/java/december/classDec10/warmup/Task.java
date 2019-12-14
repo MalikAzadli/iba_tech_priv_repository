@@ -1,9 +1,7 @@
 package december.classDec10.warmup;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,6 +25,8 @@ public class Task {
 
         Map<String, Map<String, List<Integer>>> collected = origin
                 .collect(Collectors.groupingBy(c1, Collectors.groupingBy(c2)));
+
+//        origin.collect(Collectors.groupingBy(c1, Collectors.groupingBy(c2)))
 
         collected.forEach((k,v) -> System.out.printf("%s: %s \n", k, v));
 
